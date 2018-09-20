@@ -1,0 +1,63 @@
+body {
+    font-family: cursive;
+    background: #FFF;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "header header header"
+    "aside section section"
+    "footer footer footer";
+	grid-template-rows: 80px 1fr 50px;
+	grid-template-columns: 15% 1fr 18%;
+	grid-gap: 5px;
+  height: 100vh;
+  margin: 10px;  
+	text-align: center;
+ }
+
+ header {
+	background: rgb(238, 185, 238);
+	grid-area: header;
+	color: white;
+}
+
+
+section {
+	background: white;
+	grid-area: section;
+ 
+}
+
+aside {
+	background: #cce2eb;
+	grid-area: aside; 
+	border:solid 1px;
+	height: 60vh;
+	margin: 40px;
+	border-color: ghostwhite;
+	padding: 10px;
+	
+}
+
+footer {
+	background: plum;
+	grid-area: footer;
+	height: 10vh;
+	font-family: monospace;
+}
+strong{
+	color: purple;
+}
+ul li{
+	text-align: left;
+}
+p{
+	text-align: left;
+}
+img{
+	height: 150px;
+	width: 325px;
+}
+.sobre-imagem{
+	font-size: 10px;
+}

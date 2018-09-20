@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Exercício 6</title>
+
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <main>
+  <h1>Doação de Enxoval - Contato</h1>
+   <form action="#" class="form" enctype="multipart/form-data"> <!--enctype.. permite enviar arquivos-->
+
+       <div>
+           <label for="texto">Usuário</label>
+           <input type="text" name="nome" placeholder="Insira seu usuário" id="usuario" autofocus required >
+       </div>
+
+       <div>
+           <label for="texto">Senha</label>
+           <input type="password" name="senha" id="senha" placeholder="Insira sua senha" required>
+       </div>
+       <button id="checar">Checar senha</button>
+        
+       <div>
+          <label for="texto">E-mail</label>
+          <input type="email" name="email" placeholder="Insira seu e-mail" required> <br>
+          <small id="emailHelp" class="form-email">Não se preocupe! Seu e-mail está seguro.</small>
+       </div> 
+
+       <div>
+           <label for="texto">Escolha uma ou múltiplas opções</label>
+           <div class="half-col">
+               <input type="checkbox" name="mulher" value="Mulher"> Mãe\gestante <br>
+               <input type="checkbox" name="mulher"  value="Sereia"> ONG <br>
+               <input type="checkbox" name="mulher"  value="Outro"> Outro<br>
+           </div>
+       </div>
+
+       <div>
+           <label for="texto">Escolha uma opção</label>
+           <div class="half-col">
+               <input type="radio" name="poder" value="Mulher"> Quero receber doações<br>
+               <input type="radio" name="poder" value="Mulher"> Quero doar <br>
+           </div>
+       </div>
+
+       <div>
+           <label for="texto" >Selecione um tópico</label>
+           <select name="dropdown">
+               <option value="contato">Como faço para conseguir doação de enxoval</option>
+               <option value="contato">Onde tem doaçõa de enxoval</option>
+               <option value="contato">Tenho itens para doar</option>
+           </select>
+       </div>
+       <div>
+           <label for="texto">Conhecendo você</label>
+           <select nome="extras">
+               <optgroup label= "São Paulo">
+                   <option value="cidadesp"> São Paulo</option>
+                   <option value="interiorsp">Interior de São Paulo</option>
+                   <option value="gradessp">Região metropolitana de São Paulo</option>
+                </optgroup>
+                <optgroup label="Minas Gerais">
+                    <option value="cidademg">Belo Horizonte</option>
+                    <option value"interiormg">Interior de Minas</option>
+                    
+                </optgroup>
+                
+               
+           </select>
+       </div>
+
+       <div>
+           <label for="texto">Escolha um valor</label>
+           <input type="text" name="valor">
+       </div>
+      
+       <div>
+         <label for="texto">Comentário</label>
+         <textarea name="texto"></textarea> <!--informações textuais maiores, incluindo quebras de linhas-->
+        </div>
+
+       <div class="arquivo">
+           <input type="file" name="anexo"></div>
+
+       <div>
+           <div class="enviar"></div>
+           <button class="btn btn_grey">Limpar</button>
+           <input class="btn btn_purple" type="submit" id="enviar" value="Enviar">
+       </div>
+
+       </main>
+
+   </form>
+   <script type="text/javascript">
+
+     let btn=document.querySelector("#checar");
+     btn.addEventListener("click", function(){
+     let validarUsuario= document.querySelector("#usuario").value;
+     if(validarUsuario.length <=4){
+       alert("Digite seu usuário.Digite pelo menos 5 caracters ");
+     }
+     
+     });
+     let senha=document.querySelector("#checar");
+     senha.addEventListener("click", function(){
+       let validarSenha= document.querySelector("#senha").value;
+       if(validarSenha.length <=6){
+       alert("Senha inválida. Digite pelo menos 7 caracters");
+       } 
+
+     });
+    
+     </script>
+</body>
+</html>
